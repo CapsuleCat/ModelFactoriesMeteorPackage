@@ -10,8 +10,8 @@ function includeFiles(api) {
   api.use('ecmascript');
   api.use('underscore');
   api.imply('aldeed:collection2');
-  api.addFiles('src/faker.min.js');
-  api.addFiles('src/factory.js');
+  api.addFiles('src/faker.min.js', ['server']);
+  api.addFiles('src/factory.js', ['server']);
 }
 
 Package.onUse(function(api) {
@@ -24,5 +24,5 @@ Package.onTest(function(api) {
   api.use('sanjo:jasmine@0.20.3');
   api.use('velocity:console-reporter');
   includeFiles(api);
-  api.addFiles('tests/factory-spec.js', ['server', 'client']);
+  api.addFiles('tests/factory-spec.js', ['server']);
 });
