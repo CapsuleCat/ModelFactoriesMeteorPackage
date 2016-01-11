@@ -10,7 +10,7 @@ describe('Model Factory', function () {
   it('can make models', function () { 
     var result = $factory('myModel').create(1).toArray();
 
-    expect(a.length).toBe(result);
+    expect(result.length).toBe(1);
   });
 
   it('can loop over models', function () {
@@ -24,7 +24,7 @@ describe('Model Factory', function () {
   });
 
   it('can define models by name', function () {
-    $factory.define('myModel', 'anotherName', function (f) {
+    $factory.defineAs('myModel', 'anotherName', function (f) {
       return {
         name: 'wow'
       }
@@ -32,8 +32,8 @@ describe('Model Factory', function () {
 
     var result = $factory('myModel', 'anotherName').create(1).toArray();
 
-    expect(a.length).toBe(1);
-    expect(a[0]).toBe('wow');
+    expect(result.length).toBe(1);
+    expect(result[0].name).toBe('wow');
   });
 
 

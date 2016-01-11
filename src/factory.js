@@ -8,13 +8,13 @@ $factory = function (collection, collectionName) {
   }
 
   if (typeof factoryData === 'undefined') {
-    throw new Exception('That collection could not be found!');
+    throw new Error('That collection could not be found!');
   }
 
   var create = function (number) {
     number = number || 1;
 
-    var data = _.map(_.range(25), function () {
+    var data = _.map(_.range(number), function () {
       return factoryData.generator(faker);
     });
 
@@ -72,7 +72,7 @@ $factory.raw = function (collection) {
       var innerType = type[0];
       var data = [];
 
-      _.each(_.range(randomNumber), fucntion() {
+      _.each(_.range(randomNumber), function() {
 
         data.push(fieldGenerator(innerType));
       })

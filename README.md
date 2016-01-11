@@ -2,12 +2,16 @@
 
 [![Build Status](https://travis-ci.org/CapsuleCat/MeteorModelFactories.svg?branch=master)](https://travis-ci.org/CapsuleCat/MeteorModelFactories) [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
+```sh
+meteor add capsulecat:model-factories
+```
+
 ## Documentation
 
 Model factories allows you to quickly generate a lot of data for your collections. You simply define your data generators, and then create
 models from those generators.
 
-Uses [digilord:faker](https://atmospherejs.com/digilord/faker). See [the faker docs](https://github.com/Marak/faker.js) for more information.
+Uses [faker](https://github.com/Marak/faker.js).
 
 ### Define Your Model Factories
 
@@ -35,7 +39,7 @@ $factory.defineAs(Todos, 'todos that are not checked', function (faker) {
 });
 ```
 
-If you have attached a [Simple Schema ](https://github.com/aldeed/meteor-simple-schema) to your collection, you can use the helper utility `raw` to generate a best-guess of your model:
+If you have attached a [Simple Schema](https://github.com/aldeed/meteor-simple-schema) to your collection, you can use the helper utility `raw` to generate a best-guess of your model:
 
 ```js
 $factory.define(Todos, function (faker) {
