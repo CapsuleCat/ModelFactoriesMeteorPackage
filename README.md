@@ -7,9 +7,11 @@
 Model factories allows you to quickly generate a lot of data for your collections. You simply define your data generators, and then create
 models from those generators.
 
+Uses [digilord:faker](https://atmospherejs.com/digilord/faker). See [the faker docs](https://github.com/Marak/faker.js) for more information.
+
 ### Define Your Model Factories
 
-You define a model by associating a generator callback with the collection:
+You define a model by associating a generator callback with the collection (faker is passed in as a callback parameter):
 
 ```js
 $factory.define(Todos, function (faker) {

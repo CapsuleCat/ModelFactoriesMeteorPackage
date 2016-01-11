@@ -23,7 +23,7 @@ describe('Model Factory', function () {
     expect(numberOfModels).toBe(10);
   });
 
-  it('can define models by name', fucntion () {
+  it('can define models by name', function () {
     $factory.define('myModel', 'anotherName', function (f) {
       return {
         name: 'wow'
@@ -36,5 +36,5 @@ describe('Model Factory', function () {
     expect(a[0]).toBe('wow');
   });
 
-  
+
 });
