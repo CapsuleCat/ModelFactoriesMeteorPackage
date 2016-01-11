@@ -8,6 +8,7 @@ Package.describe({
 
 function includeFiles(api) {
   api.use('ecmascript');
+  api.use('digilord:faker');
   api.imply('aldeed:collection2');
   api.addFiles('src/factory.js');
 }
