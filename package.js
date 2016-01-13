@@ -1,6 +1,6 @@
 Package.describe({
   name: 'capsulecat:model-factories',
-  version: '1.0.0',
+  version: '1.0.1',
   summary: 'Easily generate data for your models using factories',
   git: 'https://github.com/CapsuleCat/MeteorModelFactories',
   documentation: 'README.md'
@@ -9,7 +9,7 @@ Package.describe({
 function includeFiles(api) {
   api.use('ecmascript');
   api.use('underscore');
-  api.imply('aldeed:collection2');
+  api.imply('aldeed:collection2@2.8.0');
   api.addFiles('src/faker.min.js', ['server']);
   api.addFiles('src/factory.js', ['server']);
 }

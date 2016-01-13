@@ -62,7 +62,7 @@ $factory.defineAs = function (collection, collectionName, generator) {
 $factory.raw = function (collection) {
   var fieldGenerator = function (type) {
     if (type === String) {
-      return faker.lorem.words(1);
+      return faker.lorem.words(2).join(' ');
     } else if (type === Number) {
       return faker.random.number();
     } else if (type === Boolean) {
